@@ -2,8 +2,11 @@ javascript:(function(){
   var targets=document.querySelectorAll(".userMain .soundTitle__titleContainer");
   let s="";
   for (i=0; i<targets.length; i++) {
-    var title=targets[i].querySelector(".soundTitle__title").innerText;
-    s+=`<div><a href="#">${title}</a></div>`;
+    var item=targets[i].querySelector(".soundTitle__title");
+    var title=item.innerText;
+    var link=item.href;
+    var date=item.querySelector(".relativeTime").dateTime;
+    s+=`<div><a href="${link}">${title}</a>[${date}]</div>`;
   }
   myWindow=window.open('','');
   myWindow.document.write(s);
