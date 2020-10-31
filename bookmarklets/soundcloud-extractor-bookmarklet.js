@@ -1,1 +1,2 @@
-javascript:(function(){%20var%20c=document.querySelectorAll(".userMain%20.soundTitle__titleContainer");%20let%20o="";%20for%20(i=0;%20i<c.length;%20i++)%20{%20var%20s=c[i].querySelector(".soundTitle__title");%20var%20t=s.innerText;%20var%20l=s.href;%20var%20d=c[i].querySelector(".relativeTime").dateTime.slice(0,10);%20o+=`<div><a%20href="${l}">${t}</a>%20[${d}]</div>`;%20}%20w=window.open('','');%20w.document.write(o);%20w.focus();%20})()
+javascript:(function(){e=document.createElement('SCRIPT');e.type='text/javascript';e.src='https://raw.githubusercontent.com/Demaine/Soundcloud-Extractor/master/soundcloud-extractor.js';document.getElementsByTagName('head')[0].appendChild(e);
+})();
