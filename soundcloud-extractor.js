@@ -5,7 +5,7 @@ if (location.hostname == "soundcloud.com"){
     var item=targets[i].querySelector(".soundTitle__title");
     var title=item.innerText;
     var link=item.href;
-    var date=item.querySelector(".relativeTime").dateTime;
+    var date=targets[i].querySelector(".relativeTime").dateTime.slice(0,10);
     s+=`<div><a href="${link}">${title}</a>[${date}]</div>`;
   }
   myWindow=window.open('','');
